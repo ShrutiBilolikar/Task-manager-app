@@ -1,0 +1,25 @@
+<%- include("header")-%>
+    <div class="box" id="heading">
+        <h1>
+            <%= signup %>
+        </h1>
+    </div>
+    <div class="box" style="height: 300px;">
+        <div class="">
+            <% for(var i=0;i<newUser.length;i++){ %>
+                <%= newUser[i] %>
+                    <%= newUserMail[i] %>
+                        <%}%>
+        </div>
+
+        <form class="" action="/SignUp" method="post">
+            <input type="text" name="newName" placeholder="Name" autocomplete="off">
+            <input type="text" name="newEmail" placeholder="Email id" autocomplete="off">
+            <button class="submitbtn" type="submit" name="user" value=<%=signup %>>+</button>
+        </form>
+        <!-- <form class="item" action="/SignUp" method="post"> -->
+        <!--              -->
+        <!-- </form> -->
+        <!-- <button class="buttton" type="submit" name="user" value=<%=signup %>>+</button> -->
+    </div>
+    <%- include("footer")-%>
